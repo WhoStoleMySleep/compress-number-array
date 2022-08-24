@@ -5,7 +5,7 @@
  * @returns {string | object} - Возвращает массив или строку
 */
 
-const compressNumericArray = (numberArray: string | number[], procent: number) => {
+const compressNumberArray = (numberArray: string | number[], procent: number) => {
   const result = [];
 
   if (typeof numberArray === 'object') {
@@ -77,4 +77,4 @@ const compressNumericArray = (numberArray: string | number[], procent: number) =
   return [];
 };
 
-module.exports = compressNumericArray;
+module.exports = compressNumberArray;

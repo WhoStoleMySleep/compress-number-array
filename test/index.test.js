@@ -1,4 +1,4 @@
-const compressNumericArray = require("compress-numeric-array")
+const compressNumberArray = require("compress-number-array")
 
 describe("JavaScript", () => {
   describe("50 random numbers up to 300", () => {
@@ -19,15 +19,15 @@ describe("JavaScript", () => {
     const decompressed0 = []
 
     it("to string", () => {
-      expect(compressNumericArray(original, 100)).toEqual(compressed100)
-      expect(compressNumericArray(original, 20)).toEqual(compressed20)
-      expect(compressNumericArray(original, 0)).toEqual(compressed0)
+      expect(compressNumberArray(original, 100)).toEqual(compressed100)
+      expect(compressNumberArray(original, 20)).toEqual(compressed20)
+      expect(compressNumberArray(original, 0)).toEqual(compressed0)
     })
 
     it("to array", () => {
-      expect(compressNumericArray(compressed100, 100)).toEqual(decompressed100)
-      expect(compressNumericArray(compressed100, 20)).toEqual(decompressed20)
-      expect(compressNumericArray(compressed100, 0)).toEqual(decompressed0)
+      expect(compressNumberArray(compressed100, 100)).toEqual(decompressed100)
+      expect(compressNumberArray(compressed100, 20)).toEqual(decompressed20)
+      expect(compressNumberArray(compressed100, 0)).toEqual(decompressed0)
     })
   })
 
@@ -51,15 +51,15 @@ describe("JavaScript", () => {
     const decompressed0 = []
 
     it("to string", () => {
-      expect(compressNumericArray(original, 100)).toEqual(compressed100)
-      expect(compressNumericArray(original, 20)).toEqual(compressed20)
-      expect(compressNumericArray(original, 0)).toEqual(compressed0)
+      expect(compressNumberArray(original, 100)).toEqual(compressed100)
+      expect(compressNumberArray(original, 20)).toEqual(compressed20)
+      expect(compressNumberArray(original, 0)).toEqual(compressed0)
     })
 
     it("to array", () => {
-      expect(compressNumericArray(compressed100, 100)).toEqual(decompressed100)
-      expect(compressNumericArray(compressed100, 20)).toEqual(decompressed20)
-      expect(compressNumericArray(compressed100, 0)).toEqual(decompressed0)
+      expect(compressNumberArray(compressed100, 100)).toEqual(decompressed100)
+      expect(compressNumberArray(compressed100, 20)).toEqual(decompressed20)
+      expect(compressNumberArray(compressed100, 0)).toEqual(decompressed0)
     })
   })
 
@@ -99,14 +99,14 @@ describe("JavaScript", () => {
     const decompressed0 = []
 
     it("to string", () => {
-      expect(compressNumericArray(original, 100)).toEqual(compressed100)
-      expect(compressNumericArray(original, 20)).toEqual(compressed20)
+      expect(compressNumberArray(original, 100)).toEqual(compressed100)
+      expect(compressNumberArray(original, 20)).toEqual(compressed20)
     })
 
     it("to array", () => {
-      expect(compressNumericArray(compressed100, 100)).toEqual(decompressed100)
-      expect(compressNumericArray(compressed100, 20)).toEqual(decompressed20)
-      expect(compressNumericArray(compressed100, 0)).toEqual(decompressed0)
+      expect(compressNumberArray(compressed100, 100)).toEqual(decompressed100)
+      expect(compressNumberArray(compressed100, 20)).toEqual(decompressed20)
+      expect(compressNumberArray(compressed100, 0)).toEqual(decompressed0)
     })
   })
 
@@ -164,14 +164,14 @@ describe("JavaScript", () => {
     const decompressed0 = []
 
     it("to string", () => {
-      expect(compressNumericArray(original, 100)).toEqual(compressed100)
-      expect(compressNumericArray(original, 20)).toEqual(compressed20)
+      expect(compressNumberArray(original, 100)).toEqual(compressed100)
+      expect(compressNumberArray(original, 20)).toEqual(compressed20)
     })
 
     it("to array", () => {
-      expect(compressNumericArray(compressed100, 100)).toEqual(decompressed100)
-      expect(compressNumericArray(compressed100, 20)).toEqual(decompressed20)
-      expect(compressNumericArray(compressed100, 0)).toEqual(decompressed0)
+      expect(compressNumberArray(compressed100, 100)).toEqual(decompressed100)
+      expect(compressNumberArray(compressed100, 20)).toEqual(decompressed20)
+      expect(compressNumberArray(compressed100, 0)).toEqual(decompressed0)
     })
   })
 })

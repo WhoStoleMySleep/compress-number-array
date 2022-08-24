@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "dist",
     "rootDir": "lib",
     "target": "es2017",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "declaration": true
+    "declaration": true,
+    "moduleResolution": "node"
   },
   "include": ["lib/**/*"],
   "exclude": ["node_modules"]

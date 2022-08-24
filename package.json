@@ -1,7 +1,7 @@
 {
-  "name": "compress-numeric-array",
+  "name": "compress-number-array",
   "version": "1.0.0",
-  "description": "Compress and decompress numeric arrays",
+  "description": "Compress and decompress number arrays",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "tsc",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WhoStoleMySleep/compress-numeric-array.git"
+    "url": "git+https://github.com/WhoStoleMySleep/compress-number-array.git"
   },
   "keywords": [
     "compress",
-    "numeric",
+    "number",
     "array"
   ],
   "author": "WhoStoleMySleep",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WhoStoleMySleep/compress-numeric-array/issues"
+    "url": "https://github.com/WhoStoleMySleep/compress-number-array/issues"
   },
-  "homepage": "https://github.com/WhoStoleMySleep/compress-numeric-array#readme",
+  "homepage": "https://github.com/WhoStoleMySleep/compress-number-array#readme",
   "devDependencies": {
     "@types/jest": "^28.1.7",
     "@types/node": "^18.7.12",
