@@ -13,21 +13,27 @@ const compressNumberArray = (numberArray: string | number[], procent: number) =>
     const range = array.length / Math.trunc((array.length / 100) * procent);
 
     for (let index = 0; index < array.length; index += 1) {
+      const firstElement = array[index - 1];
+      const twoElement = array[index];
+      const lastResultElement = result[result.length - 1];
+
       if (index === 0) result.push([array[0]]);
 
-      else if (+array[index - 1] + range < array[index]) {
-        result[result.length - 1].push(array[index - 1]);
-        result.push([array[index]]);
+      else if (+firstElement + range < twoElement) {
+        lastResultElement.push(firstElement);
+        result.push([twoElement]);
       } else if (index === array.length - 1) {
-        result[result.length - 1].push(array[index]);
+        lastResultElement.push(twoElement);
       }
     }
 
     result.forEach(item => item[0] === item[1] ? item.length = 1 : item);
 
     for (let index = 0; index < result.length; index += 1) {
+      const [oneElement, twoElement] = result[index];
+
       if (result[index][1]) {
-        result[index] = `${result[index][0]}-${result[index][1]}`;
+        result[index] = `${oneElement}-${twoElement}`;
       }
     }
 
@@ -37,10 +43,9 @@ const compressNumberArray = (numberArray: string | number[], procent: number) =>
     const rangeArray = numberArray.split(/\s?,\s?/).map(item => [...item.split('-')]);
 
     for (let index = 0; index < rangeArray.length; index += 1) {
-      const start = rangeArray[index][0];
-      const end = rangeArray[index][1];
+      const [start, end] = rangeArray[index];
 
-      if (rangeArray[index].length > 1) {
+      if (end) {
         const keysArray = [...Array(+end + 1).keys()];
 
         result.push(...keysArray.slice(+start));
