@@ -1,0 +1,50 @@
+{
+  "name": "compress-numeric-array",
+  "version": "1.0.0",
+  "description": "Compress and decompress numeric arrays",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "tsc",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhoStoleMySleep/compress-numeric-array.git"
+  },
+  "keywords": [
+    "compress",
+    "numeric",
+    "array"
+  ],
+  "author": "WhoStoleMySleep",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WhoStoleMySleep/compress-numeric-array/issues"
+  },
+  "homepage": "https://github.com/WhoStoleMySleep/compress-numeric-array#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.7",
+    "@types/node": "^18.7.12",
+    "jest": "^28.1.3",
+    "jsdoc": "^3.6.11",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.8",
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
