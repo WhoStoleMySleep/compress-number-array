@@ -18,8 +18,8 @@ yarn add compress-number-array
 
 ```javascript
 let compressNumberArray = require("compressNumberArray")
-let compressed = compressNumberArray([1, 1, 1, 2, 2, 3])
-let decompressed = compressNumberArray(compressed)
+let compressed = compressNumberArray([1, 1, 1, 2, 2, 3], 100)
+let decompressed = compressNumberArray(compressed, 100)
 ```
 
 ```sh
@@ -34,8 +34,8 @@ let decompressed = compressNumberArray(compressed)
 
 ```typescript
 import compressNumberArray from "compress-number-array"
-const compressed = compressNumberArray([1, 1, 1, 2, 2, 3])
-const decompressed = compressnumberArray(compressed)
+const compressed = compressNumberArray([1, 1, 1, 2, 2, 3], 100)
+const decompressed = compressnumberArray(compressed, 100)
 ```
 
 ```sh
@@ -53,8 +53,8 @@ const decompressed = compressnumberArray(compressed)
 ```typescript
 import compressNumberArray from "compress-number-array"
 const array = [1, 2, 3, 4, 5, 7, 8, 9, 10]
-const result1 = compress(array, 100)
-const result2 = compress(array, 0)
+const result1 = compressNumberArray(array, 100)
+const result2 = compressNumberArray(array, 0)
 ```
 
 ```sh
