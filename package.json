@@ -1,8 +1,9 @@
 {
   "name": "compress-number-array",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Compress and decompress number arrays",
-  "main": "dist/index.js",
+  "main": "dist/index",
+  "typings": "dist/index",
   "scripts": {
     "prepare": "tsc",
     "build": "tsc",
