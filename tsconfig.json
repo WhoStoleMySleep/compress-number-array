@@ -6,7 +6,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "declaration": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "esModuleInterop": true
   },
   "include": ["lib/**/*", "lib/index.d.ts"],
   "exclude": ["node_modules"]
