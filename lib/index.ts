@@ -1,27 +1,26 @@
 declare module 'index';
 
 // compress
-function compressArrayData(array: number[], toLen: number) {
-  const sizeRatio = array.length / Math.trunc((array.length / 100) * toLen);
+const decompressArrayDate = (array: number[], range: number) => {
+  const result = [];
 
-  const results: number[] = [];
-  let resIndex = 0;
-  let lastRatio = sizeRatio;
-  let lastValue = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    const firstElement = array[index - 1];
+    const twoElement = array[index];
+    const lastResultElement = result[result.length - 1];
 
-  for (var index = 0; index < array.length; index += 1) {
-    let rest = 0;
-    lastRatio -= 1;
-    lastValue += array[index] + rest;
+    if (index === 0) result.push([array[0]]);
 
-    if (lastRatio <= 0) {
-      results[(resIndex += 1) - 1] = lastValue;
-      lastValue = 0;
-      lastRatio += sizeRatio;
+    else if (firstElement + range < twoElement) {
+      lastResultElement.push(firstElement);
+      result.push([twoElement]);
+    } else if (index === array.length - 1) {
+      lastResultElement.push(twoElement);
     }
   }
-  return results;
-}
+
+  return result;
+};
 
 const compress = (numberArray: number[], procent: number) => {
   const result = [];
@@ -45,27 +44,27 @@ const compress = (numberArray: number[], procent: number) => {
 };
 
 // decompress
+function compressArrayData(array: number[], toLen: number) {
+  const sizeRatio = array.length / Math.trunc((array.length / 100) * toLen);
 
-const decompressArrayDate = (array: number[], range: number) => {
-  const result = [];
+  const results: number[] = [];
+  let resIndex = 0;
+  let lastRatio = sizeRatio;
+  let lastValue = 0;
 
-  for (let index = 0; index < array.length; index += 1) {
-    const firstElement = array[index - 1];
-    const twoElement = array[index];
-    const lastResultElement = result[result.length - 1];
+  for (var index = 0; index < array.length; index += 1) {
+    let rest = 0;
+    lastRatio -= 1;
+    lastValue += array[index] + rest;
 
-    if (index === 0) result.push([array[0]]);
-
-    else if (firstElement + range < twoElement) {
-      lastResultElement.push(firstElement);
-      result.push([twoElement]);
-    } else if (index === array.length - 1) {
-      lastResultElement.push(twoElement);
+    if (lastRatio <= 0) {
+      results[(resIndex += 1) - 1] = lastValue;
+      lastValue = 0;
+      lastRatio += sizeRatio;
     }
   }
-
-  return result;
-};
+  return results;
+}
 
 const decompress = (numberArray: string, procent: number) => {
   const result = [];
